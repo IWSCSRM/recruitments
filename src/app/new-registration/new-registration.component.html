@@ -1,1 +1,35 @@
-<p>new-registration works!</p>
+<div class="container">
+    <h1>Register for IWSC</h1>
+    <form (ngSubmit)="onSubmit()">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Name"
+              [(ngModel)]="applicant.name" name="name">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Branch</mat-label>
+              <input matInput placeholder="Branch"
+              [(ngModel)]="applicant.branch" name="branch">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile Number</mat-label>
+              <input matInput placeholder="Mobile Number"
+              [(ngModel)]="applicant.mobileNo" name="mobileNo">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email Id</mat-label>
+              <input matInput placeholder="Email Id"
+              [(ngModel)]="applicant.emailId" name="emailId">
+            </mat-form-field>
+          </p>
+          <button type="button" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</div>
