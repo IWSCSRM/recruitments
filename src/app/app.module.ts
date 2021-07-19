@@ -7,11 +7,13 @@ import { NewRegistrationComponent } from './new-registration/new-registration.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from './materials/materials.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SuccessfulRegisterationComponent } from './successful-registeration/successful-registeration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewRegistrationComponent
+    NewRegistrationComponent,
+    SuccessfulRegisterationComponent
   ],
   imports: [
     BrowserModule,

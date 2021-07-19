@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApplicantServiceService } from '../applicant-service.service';
 import { Applicants } from '../applicants';
 
@@ -10,7 +11,7 @@ import { Applicants } from '../applicants';
 export class NewRegistrationComponent implements OnInit {
 
   applicant : Applicants = new Applicants();
-  constructor(private applicantService : ApplicantServiceService) { }
+  constructor(private applicantService : ApplicantServiceService, private router : Router) { }
 
   ngOnInit(): void {
     this.postDetails();
@@ -18,7 +19,7 @@ export class NewRegistrationComponent implements OnInit {
   postDetails(){
     this.applicantService.postDetails(this.applicant).subscribe(data => {
       console.log(data);
-
+      this.router.navigate(['registered', this.applicant.id]);
     },
     error => console.log(error));
   }

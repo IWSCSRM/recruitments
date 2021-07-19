@@ -11,8 +11,8 @@ export class ApplicantServiceService {
   private baseUrl = 'localhost';
   constructor(private httpClient: HttpClient) { }
 
-  getDetails(): Observable<Applicants[]>{
-    return this.httpClient.get<Applicants[]>(`${this.baseUrl}`);
+  getDetailsById(id: number): Observable<Applicants>{
+    return this.httpClient.get<Applicants>(`${this.baseUrl}/${id}`);
   }
   postDetails(applicant: Object) : Observable<Object>{
     return this.httpClient.post<Object>(`${this.baseUrl}`, applicant);
