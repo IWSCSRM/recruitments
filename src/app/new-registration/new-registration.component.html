@@ -37,9 +37,17 @@
                 />
               </th>
               <td>{{n.name}}</td>
+              <td> 
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>domainInfo</mat-label>
+                    <input matInput placeholder="extra information"
+                    [(ngModel)]="n.value" name="domainInfo">
+                  </mat-form-field>
+                </p>
+              </td>
             </tr>
           </p>
           <button type="button" type="submit" class="btn btn-primary">Submit</button>
     </form>
-    
 </div>
