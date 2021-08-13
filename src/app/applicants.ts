@@ -4,4 +4,5 @@ export class Applicants {
     branch!: String;
     mobileNo!: String;
     emailId!: String;
+    domain! : Array<any>
 }

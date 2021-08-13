@@ -11,10 +11,17 @@ import { Applicants } from '../applicants';
 export class NewRegistrationComponent implements OnInit {
 
   applicant : Applicants = new Applicants();
-  constructor(private applicantService : ApplicantServiceService, private router : Router) { }
+  constructor(private applicantService : ApplicantServiceService, private router : Router) {
+   }
 
   ngOnInit(): void {
     this.postDetails();
+    this.applicant.domain = [
+      {id: 1, select : false, name : 'tech'},
+      {id: 2, select : false, name : 'hr'},
+      {id: 3, select : false, name : 'content'},
+      {id: 4, select : false, name : 'graphic'},
+    ];
   }
   postDetails(){
     this.applicantService.postDetails(this.applicant).subscribe(data => {
@@ -24,6 +31,11 @@ export class NewRegistrationComponent implements OnInit {
     error => console.log(error));
   }
 
+  onChecking($event :any){
+    const id = $event.target.value;
+    const isChecked = $event.target.checked;
+    this.applicant.domain[id-1].select = isChecked;
+  }
   onSubmit(){
     console.log(this.applicant);
     this.postDetails();

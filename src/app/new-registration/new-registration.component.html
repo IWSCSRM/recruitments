@@ -29,6 +29,16 @@
               [(ngModel)]="applicant.emailId" name="emailId">
             </mat-form-field>
           </p>
+          <p>
+            <tr *ngFor="let n of applicant.domain">
+              <th scope="row">
+                <input class="form-checkbox-input" type="checkbox" [value] = "n.id" [checked] = "n.select"
+                  (change)= "onChecking($event)"
+                />
+              </th>
+              <td>{{n.name}}</td>
+            </tr>
+          </p>
           <button type="button" type="submit" class="btn btn-primary">Submit</button>
     </form>
     
