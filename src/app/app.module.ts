@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewRegistrationComponent } from './new-registration/new-registration.component';
@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SuccessfulRegisterationComponent } from './successful-registeration/successful-registeration.component';
 import { AdminComponent } from './admin/admin.component';
 import { ApplicantDetailsComponent } from './applicant-details/applicant-details.component';
+import { ProfileAuthComponent } from './profile-auth/profile-auth.component';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ApplicantDetailsComponent } from './applicant-details/applicant-details
     NewRegistrationComponent,
     SuccessfulRegisterationComponent,
     AdminComponent,
-    ApplicantDetailsComponent
+    ApplicantDetailsComponent,
+    ProfileAuthComponent,
+    ProfileDetailsComponent
   ],
   imports: [
     BrowserModule,

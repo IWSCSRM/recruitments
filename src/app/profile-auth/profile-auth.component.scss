@@ -1,0 +1,75 @@
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+.home {
+    background-color: #40444b;
+    height: 100vh;
+}
+
+.heading-1 {
+    padding-top: 2%;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 250%;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo {
+    padding-top: 4%;
+}
+
+.container {
+    background-color: #ebebeb;
+    width: 60vw;
+    height: 80vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+}
+
+.signinbtn {
+    background-color: #5776ff;
+}
+
+.signinbtn:hover {
+    background-color: #364aa7;
+}
+
+.fieldBox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 5px;
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+    .heading-1 {
+        padding-top: 4%;
+        font-size: 170%;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading-1 {
+        padding-top: 10%;
+        font-size: 150%;
+    }
+    .container {
+        margin-top: 5%;
+        width: 80vw;
+        height: 75vh;
+        border-radius: 25px;
+    }
+}
