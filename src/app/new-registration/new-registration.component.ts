@@ -17,10 +17,10 @@ export class NewRegistrationComponent implements OnInit {
   ngOnInit(): void {
     this.postDetails();
     this.applicant.domain = [
-      {id: 1, select : false, name : 'tech', value : ""},
-      {id: 2, select : false, name : 'hr', value : ""},
-      {id: 3, select : false, name : 'content', value : ""},
-      {id: 4, select : false, name : 'graphic', value : ""},
+      {id: 1, select : false, name : 'tech', value : "", isShortlisted : false},
+      {id: 2, select : false, name : 'hr', value : "", isShortlisted : false},
+      {id: 3, select : false, name : 'content', value : "", isShortlisted : false},
+      {id: 4, select : false, name : 'graphic', value : "", isShortlisted : false},
     ];
   }
   postDetails(){

@@ -1,1 +1,35 @@
-<p>successful-registeration works!</p>
+<div class="container">
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>{{ applicant.name }}</td>
+        </tr>
+        <tr>
+            <td>Email Id</td>
+            <td>{{ applicant.emailId }}</td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td>{{ applicant.branch }}</td>
+        </tr>
+        <tr>
+            <td>Registration Number</td>
+            <td>{{ applicant.registrationNo }}</td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td>{{ applicant.year }}</td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td>{{ applicant.mobileNo }}</td>
+        </tr>
+    </tbody>
+    <div class="domain-applied">
+        <h3>Domains Applied</h3>
+        <tr *ngFor="let n of applicant.domain">
+            <td *ngIf="n.select === true">{{ n.name }}</td>
+            <td *ngIf="n.select === true">{{ n.val }}</td>
+        </tr>
+    </div>
+</div>
