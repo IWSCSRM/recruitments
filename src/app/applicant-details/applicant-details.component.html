@@ -1,0 +1,17 @@
+<div class="container">
+    <div>{{ applicant.name }}</div>
+    <div>{{ applicant.emailId }}</div>
+    <div>{{ applicant.mobileNo }}</div>
+    <div>{{ applicant.registrationNo }}</div>
+    <div>{{ applicant.year }}</div>
+    <div>{{ applicant.branch }}</div>
+    <tr *ngFor="let n of applicant.domain">
+        <td *ngIf="n.select === true">
+            <input class="form-checkbox-input" type="checkbox" [value] = "n.id" [checked] = "n.isShortlisted"
+            (change)= "onChecking($event)" 
+          />
+        </td>
+        <td *ngIf="n.select === true">{{n.name}}</td>
+        <td *ngIf="n.select === true">{{ n.val }}</td>
+      </tr>
+</div>

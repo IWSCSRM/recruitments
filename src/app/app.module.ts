@@ -8,12 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from './materials/materials.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SuccessfulRegisterationComponent } from './successful-registeration/successful-registeration.component';
+import { AdminComponent } from './admin/admin.component';
+import { ApplicantDetailsComponent } from './applicant-details/applicant-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewRegistrationComponent,
-    SuccessfulRegisterationComponent
+    SuccessfulRegisterationComponent,
+    AdminComponent,
+    ApplicantDetailsComponent
   ],
   imports: [
     BrowserModule,
