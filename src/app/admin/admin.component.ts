@@ -13,18 +13,6 @@ export class AdminComponent implements OnInit {
   applicant : Array<Applicants> = [];
   constructor(private applicantService : ApplicantServiceService, private router : Router) { }
 
-  // applicant = [
-  //   {
-  //     id : 12,
-  //     name : "rajeev",
-  //     emailId : "rajeev.gamil.com",
-  //   },
-  //   {
-  //     id : 23,
-  //     name : "raju",
-  //     emailId : "raju2gamil.com",
-  //   }
-  // ];
   ngOnInit(): void {
     this.getApplicantList()
   }
