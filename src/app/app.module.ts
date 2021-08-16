@@ -4,19 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewRegistrationComponent } from './new-registration/new-registration.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialsModule } from './materials/materials.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SuccessfulRegisterationComponent } from './successful-registeration/successful-registeration.component';
+import { AdminComponent } from './admin/admin.component';
+import { ApplicantDetailsComponent } from './applicant-details/applicant-details.component';
 import { ProfileAuthComponent } from './profile-auth/profile-auth.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewRegistrationComponent,
+    SuccessfulRegisterationComponent,
+    AdminComponent,
+    ApplicantDetailsComponent,
     ProfileAuthComponent,
     ProfileDetailsComponent
   ],
@@ -24,13 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatInputModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatBadgeModule
-    
+    MaterialsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,67 @@
-<p>new-registration works!</p>
+<div class="container">
+    <h1>Register for IWSC</h1>
+    <form #recruitmentForm = "ngForm" (ngSubmit)="onSubmit()">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Name"
+              [(ngModel)]="applicant.name" name="name" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Branch</mat-label>
+              <input matInput placeholder="Branch"
+              [(ngModel)]="applicant.branch" name="branch" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Registration Number</mat-label>
+              <input matInput placeholder="Registration Number"
+              [(ngModel)]="applicant.registrationNo" name="Registration Number" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Year</mat-label>
+              <input matInput placeholder="Year of Study"
+              [(ngModel)]="applicant.year" name="year" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile</mat-label>
+              <input matInput placeholder="Mobile"
+              [(ngModel)]="applicant.mobileNo" name="moblie" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email Id</mat-label>
+              <input matInput placeholder="Email Id"
+              [(ngModel)]="applicant.emailId" name="emailId" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <tr *ngFor="let n of applicant.domain">
+              <th scope="row">
+                <input class="form-checkbox-input" type="checkbox" [value] = "n.id" [checked] = "n.select"
+                  (change)= "onChecking($event)" required
+                />
+              </th>
+              <td>{{n.name}}</td>
+              <td> 
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>domainInfo</mat-label>
+                    <input matInput placeholder="domain information"
+                    [(ngModel)]="n.value" name="domainInfo">
+                  </mat-form-field>
+                </p>
+              </td>
+            </tr>
+          </p>
+          <button type="button" type="submit" class="btn btn-primary"[disabled]="!recruitmentForm.valid">Submit</button>
+    </form>
+</div>

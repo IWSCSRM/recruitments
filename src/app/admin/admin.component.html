@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Applicant Name</td>
+                <td>Email Id</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let n of applicant">
+                <td>{{ n.name }}</td>
+                <td>{{ n.emailId }}</td>
+                <td><button type="button" class="btn btn-info" (click)="detailsOfCandidate(n.id)">Details</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
