@@ -8,7 +8,7 @@ import { Applicants } from './applicants';
 })
 export class ApplicantServiceService {
 
-  private baseUrl = 'localhost';
+  private baseUrl = 'https://nameless-meadow-87725.herokuapp.com/api/';
   constructor(private httpClient: HttpClient) { }
 
   //get by id
@@ -16,15 +16,15 @@ export class ApplicantServiceService {
     return this.httpClient.get<Applicants>(`${this.baseUrl}/${id}`);
   }
   //post details
-  postDetails(applicant: Object) : Observable<Object>{
-    return this.httpClient.post<Object>(`${this.baseUrl}`, applicant);
+  postDetails(applicant: Applicants) : Observable<Applicants>{
+    return this.httpClient.post<Applicants>(this.baseUrl+"form", applicant);
   }
   //get the array
-  getDetails() : Observable<Applicants[]>{
-    return this.httpClient.get<Applicants[]>(`${this.baseUrl}`);
+  getDetails() : Observable<any>{
+    return this.httpClient.get<any>(this.baseUrl+"getDetail");
   } 
   //put details by id
-  putDetailsById(Applicants : Object, id : number) : Observable<Applicants>{
+  putDetailsById(Applicants : Applicants, id : number) : Observable<Applicants>{
     return this.httpClient.put<Applicants>(`${this.baseUrl}/${id}`, Applicants);
   }
 

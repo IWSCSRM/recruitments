@@ -10,7 +10,8 @@ import { Applicants } from '../applicants';
 })
 export class AdminComponent implements OnInit {
 
-  applicant : Array<Applicants> = [];
+  applicant! : Applicants[] ; 
+
   constructor(private applicantService : ApplicantServiceService, private router : Router) { }
 
   ngOnInit(): void {
@@ -18,8 +19,10 @@ export class AdminComponent implements OnInit {
   }
   private getApplicantList(){
     this.applicantService.getDetails().subscribe(data => {
-      this.applicant = data;
+      this.applicant = data.user;
+      console.log(data);
     });
+    console.log(this.applicant);
   }
 
   detailsOfCandidate(id : number){

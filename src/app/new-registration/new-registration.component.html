@@ -46,22 +46,21 @@
           <p>
             <tr *ngFor="let n of applicant.domain">
               <th scope="row">
-                <input class="form-checkbox-input" type="checkbox" [value] = "n.id" [checked] = "n.select"
-                  (change)= "onChecking($event)" required
+                <input class="form-checkbox-input" type="checkbox" [value] = "n.id"
+                  (change)= "onChecking($event)" 
                 />
               </th>
               <td>{{n.name}}</td>
               <td> 
-                <p>
-                  <mat-form-field appearance="outline">
-                    <mat-label>domainInfo</mat-label>
-                    <input matInput placeholder="domain information"
-                    [(ngModel)]="n.value" name="domainInfo">
-                  </mat-form-field>
-                </p>
+                <mat-form-field *ngIf="n.select" id="n.id" appearance="outline">
+                    <mat-label>Domain Info</mat-label>
+                    <input matInput [(ngModel)] = "n.value" type="text" placeholder="domain information"
+                    name = "{{n.name}}" value="{{n.value}}">
+                </mat-form-field>
               </td>
             </tr>
           </p>
           <button type="button" type="submit" class="btn btn-primary"[disabled]="!recruitmentForm.valid">Submit</button>
     </form>
 </div>
+
