@@ -26,7 +26,7 @@ export class NewRegistrationComponent implements OnInit {
   postDetails(){
     this.applicantService.postDetails(this.applicant).subscribe(data => {
       console.log(data);
-      this.applicant = data;
+      this.applicant = data.user;
       this.router.navigate(['/registered', this.applicant._id]);
     },
     error => console.log(error));
