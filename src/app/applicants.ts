@@ -1,5 +1,5 @@
 export class Applicants {
-    id!: number;
+    _id!: number;
     name!: String;
     branch!: String;
     registrationNo! : Number;

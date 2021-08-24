@@ -12,20 +12,20 @@ export class ApplicantServiceService {
   constructor(private httpClient: HttpClient) { }
 
   //get by id
-  getDetailsById(id: number): Observable<Applicants>{
-    return this.httpClient.get<Applicants>(`${this.baseUrl}/${id}`);
+  getDetailsById(id: number): Observable<any>{
+    return this.httpClient.get<any>(this.baseUrl+"getDetailbyId/"+id);
   }
   //post details
-  postDetails(applicant: Applicants) : Observable<Applicants>{
-    return this.httpClient.post<Applicants>(this.baseUrl+"form", applicant);
+  postDetails(applicant: Applicants) : Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"form", applicant);
   }
   //get the array
   getDetails() : Observable<any>{
     return this.httpClient.get<any>(this.baseUrl+"getDetail");
   } 
   //put details by id
-  putDetailsById(Applicants : Applicants, id : number) : Observable<Applicants>{
-    return this.httpClient.put<Applicants>(`${this.baseUrl}/${id}`, Applicants);
+  putDetailsById(Applicants : Applicants, id : number) : Observable<any>{
+    return this.httpClient.put<any>(this.baseUrl+"updateAdm/"+id, {Applicants});
   }
 
 }

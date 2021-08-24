@@ -17,7 +17,7 @@ export class ApplicantDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.applicantService.getDetailsById(this.id).subscribe(data => {
-      this.applicant = data;
+      this.applicant = data.user[0];
     },
     error => console.log(error)
     );
@@ -27,7 +27,7 @@ export class ApplicantDetailsComponent implements OnInit {
     const shortlisted = $event.target.checked;
     this.applicant.domain[id-1].isShortlisted = shortlisted;
     this.applicantService.putDetailsById(this.applicant, this.id).subscribe(data => {
-      this.applicant = data;
+      this.applicant = data.result;
     },
     error => console.log(error))
   }
