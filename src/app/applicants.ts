@@ -1,10 +1,10 @@
 export class Applicants {
-    id!: number;
+    _id!: number;
     name!: String;
     branch!: String;
     registrationNo! : Number;
     year! : Number;
-    mobileNo!: String;
+    mobileNo!: Number;
     emailId!: String;
-    domain! : Array<any>
+    domain! : any;
 }

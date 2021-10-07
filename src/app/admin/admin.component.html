@@ -11,7 +11,7 @@
             <tr *ngFor="let n of applicant">
                 <td>{{ n.name }}</td>
                 <td>{{ n.emailId }}</td>
-                <td><button type="button" class="btn btn-info" (click)="detailsOfCandidate(n.id)">Details</button></td>
+                <td><button type="button" class="btn btn-info" (click)="detailsOfCandidate(n._id)">Details</button></td>
             </tr>
         </tbody>
     </table>
