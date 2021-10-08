@@ -27,5 +27,8 @@ export class ApplicantServiceService {
   putDetailsById(Applicants : Applicants, id : number) : Observable<any>{
     return this.httpClient.put<any>(this.baseUrl+"updateAdm/"+id, {Applicants});
   }
-
+  //get details by email id
+  getDetailsByEmailId(emailId : String) : Observable<Applicants>{
+    return this.httpClient.get<any>(this.baseUrl+emailId);
+  }
 }
