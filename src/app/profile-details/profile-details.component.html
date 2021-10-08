@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card mb-3">
+                <div class="card mb-3 details">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
@@ -98,53 +98,33 @@
 
                     </div>
                 </div>
-
-                <div class="row gutters-sm">
-                    <div class="col-sm-12 mb-12">
-                        <h2 class="text-center">Application Status</h2>
-                    </div>
-                    <div class="col-sm-4 mb-3" *ngFor="let n of applicant.domain">
+               
+                <div class="col-sm-12 mb-12">
+                    <h2 class="text-center">Application Status</h2>
+                </div>
+               <div *ngFor="let n of applicant.domain">
+                <div class="row gutters-sm d-flex justify-content-center cp" *ngIf="n.select === true">
+                    <div class="col-sm-12 col-md-8 " >
                         <div class="card h-100">
-                            <div class="card-body" *ngIf="n.select === true">
-                                <h5 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>{{n.name}}</h5>
-
+                            <div class="card-body"*ngIf="n.select === true" >
+                                <div class="d-flex justify-content-center">
+                                <h3 class="d-flex align-items-center text-center mb-3 domain " ><i class="material-icons text-info mr-2">assignment</i>{{n.name}}</h3>
+                                 </div>
                                 <div class="progress mb-3" style="height: 5px">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <div *ngIf="n.isShortlisted === true">
-                                    <h5>Selected</h5>
+                                    <div class="d-flex justify-content-center"> <h3 class=" badge badge-success ">Selected</h3></div>
+                                   
                                 </div>
                                 <div *ngIf="n.isShortlisted === false">
-                                    <h5>pending</h5>
+                                    <div class="d-flex justify-content-center"> <h3 class="badge badge-warning d-flex justify-content-center">Pending</h3></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-sm-4 mb-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i> Creatives</h6>
-
-                                <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="col-sm-4 mb-3">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i> HR & Marketing</h6>
-
-                                <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-
-
+            </div>
 
             </div>
         </div>
