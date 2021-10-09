@@ -23,14 +23,18 @@
                 </mat-form-field>
             </p>
 
-            <p>
+            <p class="{{hide}}">
                 <mat-form-field appearance="outline">
                     <mat-label class="input1">OTP</mat-label>
                     <input  class="input1" ngModel type="password" matInput placeholder="One Time Password" required>
                 </mat-form-field>
             </p>
-            <button type="button" class="grow btn btn-primary signinbtn" routerLink="/user-details">Validate</button>
-
+            <div class="d-flex justify-content-center">
+            <button type="button" class="grow btn  btn-primary signinbtn {{unhide}}" (click)="toggle()" routerLink="#">Send OTP</button>
+            </div>
+            <div class="d-flex justify-content-center">
+            <button type="button" class="grow btn btn-primary signinbtn {{hide}}" routerLink="/user-details">Validate</button>
+            </div>
 
         </div>
         </div>

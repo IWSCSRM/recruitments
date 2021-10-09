@@ -18,6 +18,10 @@
 	animation: MoveUpDown 3s linear infinite;
 	position: absolute;
 }
+.unhide{
+    display: block;
+}
+
 
 @keyframes MoveUpDown {
 	0%,
@@ -77,6 +81,55 @@
     background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
     min-height: 110vh;
 }
+
+.heading-1 {
+    padding-top: 2%;
+    
+    background: -webkit-linear-gradient(#eee, rgb(216, 255, 250));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-size: 250%;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+}
+.mat-form-field-flex {
+    padding: 0 .75em 0 .75em;
+    margin-top: -0.25em;
+    position: relative;
+    border: white 3px solid !important;
+}
+
+.logo {
+    padding-top: 4%;
+}
+
+// .container {
+//     background-color: #ebebeb;
+//     width: 60vw;
+//     height: 80vh;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     border-radius: 25px;
+// }
+
+.signinbtn {
+    background-color: #5776ff;
+}
+
+.signinbtn:hover {
+    background-color: #364aa7;
+}
+
+.fieldBox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 5px;
+}
 ::ng-deep .mat-focused .mat-form-field-label {
     /*change color of label*/
     color: white !important;
@@ -120,50 +173,15 @@
   .mat-input-element::placeholder .mat-form-field-autofill-control::placeholder{
 color: white !important;
   }
-
-.heading-1 {
-    padding-top: 2%;
-    
-    background: -webkit-linear-gradient(#eee, rgb(216, 255, 250));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    font-size: 250%;
-    font-weight: 600;
-    text-align: center;
-    justify-content: center;
+  .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 .75em 0 .75em;
+    margin-top: -0.25em;
+    position: relative;
+    border: white 2px solid;
 }
-
-.logo {
-    padding-top: 4%;
+.hide{
+    display: none;
 }
-
-// .container {
-//     background-color: #ebebeb;
-//     width: 60vw;
-//     height: 80vh;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-//     border-radius: 25px;
-// }
-
-.signinbtn {
-    background-color: #5776ff;
-}
-
-.signinbtn:hover {
-    background-color: #364aa7;
-}
-
-.fieldBox {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-}
-
-.btn {
-    width: 100px;
-    border-radius: 5px;
-}
-
 @media (max-width: 992px) {}
 
 @media (max-width: 768px) {

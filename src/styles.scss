@@ -12,6 +12,14 @@
 	animation: MoveUpDown 3s linear infinite;
 	position: absolute;
 }
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    border-radius: 5px;
+    border: white 0.5px solid;
+}
+.mat-form-field-appearance-outline:hover .mat-form-field-flex:hover {
+    border-radius: 5px;
+    border: transparent !important;
+}
 
 @keyframes MoveUpDown {
 	0%,
