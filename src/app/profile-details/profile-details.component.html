@@ -103,7 +103,7 @@
                     <div class="col-sm-12 mb-12">
                         <h2 class="text-center">Application Status</h2>
                     </div>
-                    <div class="col-sm-4 mb-3" *ngFor="let n of applicant.domain">
+                    <div class="col-sm-12 col-md-12 d-flex justify-content-center" *ngFor="let n of applicant.domain">
                         <div class="card h-100">
                             <div class="card-body" *ngIf="n.select === true">
                                 <h5 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>{{n.name}}</h5>
