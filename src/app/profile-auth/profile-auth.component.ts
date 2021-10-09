@@ -16,8 +16,26 @@ export class ProfileAuthComponent implements OnInit {
   applicant : Applicants = new Applicants();
   OTP : number = 90234;
   constructor(private applicantService : ApplicantServiceService, private router : Router) { }
+   unhide = "unhide";
+   hide = "hide"
+  toggle(){
+    if(this.unhide){
+      this.unhide = "hide";
+    }
+    else{
+      this.unhide = "hide";
+    }
+    if(this.hide){
+      this.hide = "unhide";
+    }
+    else{
+      this.hide = "hide";
+    }
 
+  }
+  
   ngOnInit(): void {
+    
   }
 
   onSubmit(){
