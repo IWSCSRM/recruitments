@@ -18,7 +18,6 @@ export class ProfileDetailsComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.applicantService.getDetailsById(this.id).subscribe((data) => {
       this.applicant = data.user[0];
-      console.log(this.applicant);
     },
     (error) => {console.log(error)}
     );
