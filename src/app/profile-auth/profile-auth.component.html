@@ -11,14 +11,14 @@
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label class="input1">Email</mat-label>
-                    <input class="input1" ngModel matInput [pattern]="emailPattern" placeholder="abc@xyz.com" required>
+                    <input class="input1" ngModel matInput [pattern]="emailPattern" placeholder="abc@xyz.com" required [(ngModel)]="profileAuth.emailId" name="emailId">
                     <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label class="input1">Phone No.</mat-label>
-                    <input class="input1" ngModel type="number" maxlength="10" matInput placeholder="999877XX70" required>
+                    <input class="input1" ngModel type="number" maxlength="10" matInput placeholder="999877XX70" required [(ngModel)]="profileAuth.num" name="num">
 
                 </mat-form-field>
             </p>

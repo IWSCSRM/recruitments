@@ -14,7 +14,7 @@ const routes: Routes = [
   {path : 'admin-iwsc', component : AdminComponent},
   {path: 'applicant-details/:id', component : ApplicantDetailsComponent},
   {path: 'profile-auth', component: ProfileAuthComponent},
-  {path: 'user-details', component: ProfileDetailsComponent}
+  {path: 'user-details/:id', component: ProfileDetailsComponent}
 ];
 
 

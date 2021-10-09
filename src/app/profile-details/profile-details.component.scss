@@ -3,23 +3,33 @@ body {
     color: #1a202c;
     text-align: left;
     background-color: #40444b;
+   
 }
 
 .main-body {
     padding: 15px;
+  
+}
+.badge{
+    width:50% !important;
+    align-items: center;
+}
+.domain{
+    color: white !important;
+}
+.cp{
+    margin-top: 5vh;
 }
 
-.card {
+.cp .card {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
-}
-
-.card {
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
+    background: radial-gradient(circle, #0e13be 0%, #0f151b 100%);
     background-clip: border-box;
     border: 0 solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
