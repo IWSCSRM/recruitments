@@ -1,14 +1,7 @@
-body {
-    margin-top: 20px;
-    color: #1a202c;
-    text-align: left;
-    background-color: #40444b;
-   
-}
 
 .main-body {
     padding: 15px;
-  
+   
 }
 .badge{
     width:50% !important;
@@ -28,13 +21,26 @@ body {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
-    background: radial-gradient(circle, #0e13be 0%, #0f151b 100%);
+    background-color: #e9ecef;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgb(2, 95, 153) 92%);
     background-clip: border-box;
     border: 0 solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
 }
+.details{
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgb(25, 25, 185) 0%, rgb(2, 95, 153) 92%) !important;
+    color: white !important;
+}
+.text-black{
+    color: black;
+}
 
+
+
+.social-svg{
+    width: 50vh;
+    height: 50vh;
+}
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
@@ -67,4 +73,49 @@ body {
 
 .shadow-none {
     box-shadow: none!important;
+}
+.text{
+    color: white;
+}
+.text-secondary {
+    color: #c1d6ff !important;
+}
+.card{
+    background-color: #e9ecef !important;
+}
+
+element.style {
+}
+.list-group-flush .list-group-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+.align-items-center {
+    -webkit-box-align: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+.justify-content-between {
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.flex-wrap {
+    -ms-flex-wrap: wrap!important;
+    flex-wrap: wrap!important;
+}
+.d-flex {
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.list-group-item {
+    background-color: #e9ecef !important;
+}
+@media (max-width: 576px){
+    .social-svg{
+        width: 42vh;
+        height: 42vh;
+    }
 }
