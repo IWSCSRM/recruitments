@@ -1,0 +1,141 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-2 {
+  margin: 5% 20%;
+  padding: 0% 5%;
+  background-color: rgba(235, 235, 235, 0.75);
+  width: 60vw;
+  height: 120vh;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 15px;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 1em;
+  font-weight: bold;
+  color: #0f151b;
+}
+
+img.registered-svg {
+  height: 280px;
+  margin: 5% auto;
+  display: block;
+  justify-content: space-evenly;
+}
+
+.fieldName {
+  text-align: left;
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.heading {
+  padding: 2rem 0rem 1rem 3rem;
+  font-weight: bold;
+  color: #0f151b;
+}
+
+div.domain-applied td.domains-container {
+  padding: 10px 15px;
+  margin: 0% 25% !important;
+  min-height: 45px;
+  min-width: 180px;
+  background: radial-gradient(circle, #1e24d6d0 0%, #0f151bf0 100%);
+  color: aliceblue;
+  font-size: 15px;
+  box-shadow: 0px 0px 4px 0 rgba(0, 7, 81, 0.3);
+  border-radius: 8px;
+  font-weight: lighter;
+  display: inline;
+  justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1439px) {
+  .container-2 {
+    width: 275%;
+    height: 85vh;
+  }
+  img.registered-svg {
+    height: 350px;
+    position: absolute;
+    right: 80px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .container-2 {
+    width: 145%;
+    height: 145vh;
+    margin: 5% 13%;
+  }
+  img.registered-svg {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .container-2 {
+    width: 145%;
+    height: 125vh;
+    margin: 5% 2%;
+  }
+
+  img.registered-svg {
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .main-heading {
+    font-weight: bold;
+  }
+
+  .heading {
+    padding: 1rem 0.5rem;
+  }
+
+  .fieldName {
+    padding: 0.5rem 0.5rem;
+    font-size: 12px;
+  }
+
+  .fieldValue {
+    font-size: 12px;
+  }
+
+  div.domain-applied td.domains-container {
+    margin: 0% 12% 0% 2% !important;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .container-2 {
+    width: 80vw;
+    margin: 5% 4%;
+  }
+
+  img.registered-svg {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .container-2 {
+    width: 105%;
+  }
+
+  .fieldName {
+    font-size: 10px;
+  }
+
+  .fieldValue {
+    font-size: 10px;
+  }
+}
