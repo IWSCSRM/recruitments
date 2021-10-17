@@ -37,7 +37,6 @@ export class ProfileAuthComponent implements OnInit {
     }
     this.applicantService.postDetailsForLogin(this.emailObj).subscribe((data) => {
       this.OTP = data.uuid;
-      console.log(this.OTP);
       this.applicant = data.user;
     },
     (Error) => {alert("User with email id doesn't exist");}

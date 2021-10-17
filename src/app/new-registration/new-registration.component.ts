@@ -25,7 +25,6 @@ export class NewRegistrationComponent implements OnInit {
   }
   postDetails(){
     this.applicantService.postDetails(this.applicant).subscribe(data => {
-      console.log(data);
       this.applicant = data.user;
       this.router.navigate(['/registered', this.applicant._id]);
     },
@@ -33,11 +32,9 @@ export class NewRegistrationComponent implements OnInit {
   }
 
   onChecking($event :any){
-    console.log(this.applicant.domain);
     this.applicant.domain[$event.target.value-1].select = $event.target.checked;
   }
   onSubmit(){
-    console.log(this.applicant);
     this.postDetails();
   }
 
