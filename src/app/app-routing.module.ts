@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'applicant-details/:id', component : ApplicantDetailsComponent},
   {path: 'profile-auth', component: ProfileAuthComponent},
   {path: 'user-details/:id', component: ProfileDetailsComponent},
-  {path: 'admin-login', component: AdminLoginComponent}
+  {path: 'login', component: AdminLoginComponent}
 ];
 
 

@@ -28,11 +28,11 @@ export class ApplicantServiceService {
     return this.httpClient.put<any>(this.baseUrl+"updateAdm/"+id, {Applicants});
   }
   //get details by email id
-  postDetailsForLogin(emailId : String) : Observable<any>{
-    return this.httpClient.post<any>(this.baseUrl+"/emailProcess", emailId);
+  postDetailsForLogin(emailObj : any) : Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"emailProcess", emailObj);
   }
   //admin login
-  postDetailsForAdminLogin(pass : String) : Observable<any>{
-    return this.httpClient.post<any>(this.baseUrl+"/login", pass);
+  postDetailsForAdminLogin(adminObj : any) : Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"login", adminObj);
   }
 }

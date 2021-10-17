@@ -1,5 +1,5 @@
 <section class="home">
-    <h1 class="heading-1">Profile Login</h1>
+    <h1 class="heading-1">Admin Login</h1>
     <br>
     <div class="container">
         <div class="row d-flex justify-content-center">
@@ -10,19 +10,11 @@
         <div class="fieldBox">
             <p>
                 <mat-form-field appearance="outline">
-                    <mat-label class="input1">Email</mat-label>
-                    <input class="input1" ngModel matInput [pattern]="emailPattern" placeholder="abc@xyz.com" required>
-                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    <mat-label class="input1">Password</mat-label>
+                    <input type="password" class="input1" [(ngModel)]="pass" name ="pass" matInput placeholder="" required>
                 </mat-form-field>
             </p>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label class="input1">Phone No.</mat-label>
-                    <input class="input1" ngModel type="number" maxlength="10" matInput placeholder="999877XX70" required>
-
-                </mat-form-field>
-            </p>
-            <button type="button" class="grow btn  btn-primary signinbtn" >Login</button>
+            <button type="button" class="grow btn  btn-primary signinbtn" (click)="onSubmit()">Login</button>
 
         </div>
         </div>

@@ -13,6 +13,7 @@ export class ProfileAuthComponent implements OnInit {
   // passwordPattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}";
   emailPattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
   profileAuth : ProfileAuthClass = new ProfileAuthClass();
+  emailObj : Object = {};
   applicant : Applicants = new Applicants();
   OTP : number | undefined;
   constructor(private applicantService : ApplicantServiceService, private router : Router) { }
@@ -31,14 +32,15 @@ export class ProfileAuthComponent implements OnInit {
     else{
       this.hide = "hide";
     }
-    this.applicantService.postDetailsForLogin(this.profileAuth.emailId).subscribe((data) => {
-      console.log(data);
+    this.emailObj = {
+      "email" : this.profileAuth.emailId
+    }
+    this.applicantService.postDetailsForLogin(this.emailObj).subscribe((data) => {
       this.OTP = data.uuid;
-      if(this.OTP === this.profileAuth.otp){
-        this.applicant = data.user;
-      }
+      console.log(this.OTP);
+      this.applicant = data.user;
     },
-    (Error) => {console.log(Error)}
+    (Error) => {alert("User with email id doesn't exist");}
     );
   }
   
@@ -47,11 +49,11 @@ export class ProfileAuthComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.OTP === this.profileAuth.otp){
-       this.router.navigate(['/user-details',this.applicant._id]);
-     }
-     else{
-       alert("Enter correct email id");
-     }
+    if(this.OTP == this.profileAuth.otp){
+      this.router.navigate(['/user-details',this.applicant._id]);
+    }
+    else{
+      alert("Enter correct otp");
+    }
   }
 }
