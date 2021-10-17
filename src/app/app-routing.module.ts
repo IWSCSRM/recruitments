@@ -6,20 +6,23 @@ import { NewRegistrationComponent } from './new-registration/new-registration.co
 import { SuccessfulRegisterationComponent } from './successful-registeration/successful-registeration.component';
 import { ProfileAuthComponent } from './profile-auth/profile-auth.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
-
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
-  {path: '', redirectTo: 'apply', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'apply', component: NewRegistrationComponent},
   {path: 'registered/:id', component: SuccessfulRegisterationComponent},
   {path : 'admin-iwsc', component : AdminComponent},
   {path: 'applicant-details/:id', component : ApplicantDetailsComponent},
   {path: 'profile-auth', component: ProfileAuthComponent},
-  {path: 'user-details/:id', component: ProfileDetailsComponent}
+  {path: 'user-details/:id', component: ProfileDetailsComponent},
+  {path: 'home',component: HomeComponent}
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled', // Add options right here
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
