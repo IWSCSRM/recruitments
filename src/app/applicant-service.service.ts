@@ -8,7 +8,7 @@ import { Applicants } from './applicants';
 })
 export class ApplicantServiceService {
 
-  private baseUrl = 'https://nameless-meadow-87725.herokuapp.com/api/';
+  private baseUrl = 'https://vast-beach-10869.herokuapp.com/api/';
   constructor(private httpClient: HttpClient) { }
 
   //get by id
@@ -28,7 +28,11 @@ export class ApplicantServiceService {
     return this.httpClient.put<any>(this.baseUrl+"updateAdm/"+id, {Applicants});
   }
   //get details by email id
-  getDetailsByEmailId(emailId : String) : Observable<Applicants>{
-    return this.httpClient.get<any>(this.baseUrl+emailId);
+  postDetailsForLogin(emailObj : any) : Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"emailProcess", emailObj);
+  }
+  //admin login
+  postDetailsForAdminLogin(adminObj : any) : Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"login", adminObj);
   }
 }

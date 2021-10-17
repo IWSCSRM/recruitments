@@ -24,6 +24,10 @@
     border: transparent !important;
 }
 
+input.mat-input-element {
+    color: white !important;
+}
+
 @keyframes MoveUpDown {
     0%,
     100% {
@@ -92,6 +96,7 @@ html,
 body {
     height: 100%;
     background: radial-gradient(circle, #0e13be 0%, #0f151b 100%);
+    color: white;
 }
 
 body {

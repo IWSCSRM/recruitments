@@ -7,15 +7,18 @@ import { SuccessfulRegisterationComponent } from './successful-registeration/suc
 import { ProfileAuthComponent } from './profile-auth/profile-auth.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 import { HomeComponent } from './home/home.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home',component: HomeComponent},
   {path: 'apply', component: NewRegistrationComponent},
   {path: 'registered/:id', component: SuccessfulRegisterationComponent},
   {path : 'admin-iwsc', component : AdminComponent},
   {path: 'applicant-details/:id', component : ApplicantDetailsComponent},
   {path: 'profile-auth', component: ProfileAuthComponent},
   {path: 'user-details/:id', component: ProfileDetailsComponent},
-  {path: 'home',component: HomeComponent}
+  {path: 'login', component: AdminLoginComponent}
 ];
 
 
