@@ -1,17 +1,26 @@
-
 .main-body {
     padding: 15px;
-   
 }
-.badge{
-    width:50% !important;
+
+.badge {
+    width: 50% !important;
     align-items: center;
 }
-.domain{
+
+#black {
+    color: black;
+}
+
+.domain {
     color: white !important;
 }
-.cp{
+
+.cp {
     margin-top: 5vh;
+}
+
+.black {
+    color: black;
 }
 
 .cp .card {
@@ -22,25 +31,26 @@
     min-width: 0;
     word-wrap: break-word;
     background-color: #e9ecef;
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgb(2, 95, 153) 92%);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgb(2, 95, 153) 92%);
     background-clip: border-box;
     border: 0 solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
 }
-.details{
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgb(25, 25, 185) 0%, rgb(2, 95, 153) 92%) !important;
+
+.details {
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgb(25, 25, 185) 0%, rgb(2, 95, 153) 92%) !important;
     color: white !important;
 }
-.text-black{
+
+.text-black {
     color: black;
 }
 
-
-
-.social-svg{
+.social-svg {
     width: 50vh;
     height: 50vh;
 }
+
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
@@ -74,47 +84,62 @@
 .shadow-none {
     box-shadow: none!important;
 }
-.text{
+
+.text {
     color: white;
 }
+
 .text-secondary {
     color: #c1d6ff !important;
 }
-.card{
+
+.card {
     background-color: #e9ecef !important;
 }
 
-element.style {
-}
 .list-group-flush .list-group-item {
     border-right: 0;
     border-left: 0;
     border-radius: 0;
 }
+
 .align-items-center {
     -webkit-box-align: center!important;
     -ms-flex-align: center!important;
     align-items: center!important;
 }
+
 .justify-content-between {
     -webkit-box-pack: justify!important;
     -ms-flex-pack: justify!important;
     justify-content: space-between!important;
 }
+
 .flex-wrap {
     -ms-flex-wrap: wrap!important;
     flex-wrap: wrap!important;
 }
+
 .d-flex {
     display: -webkit-box!important;
     display: -ms-flexbox!important;
     display: flex!important;
 }
+
+.input1 .ng-tns-c71-7 {
+    color: white;
+}
+
 .list-group-item {
     background-color: #e9ecef !important;
 }
-@media (max-width: 576px){
-    .social-svg{
+
+#black {
+    color: black !important;
+}
+
+@media (max-width: 576px) {
+    .social-svg {
         width: 42vh;
         height: 42vh;
     }

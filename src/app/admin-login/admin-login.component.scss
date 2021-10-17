@@ -5,76 +5,87 @@
 .grow:hover {
     transform: scale(1.1);
 }
+
 // Animations 
 .rotate {
-	transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .rotate:hover {
-	transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .object {
-	animation: MoveUpDown 3s linear infinite;
-	position: absolute;
+    animation: MoveUpDown 3s linear infinite;
+    position: absolute;
 }
-.unhide{
+
+.unhide {
     display: block;
 }
 
-
 @keyframes MoveUpDown {
-	0%,
-	100% {
-		bottom: 0;
-	}
-	50% {
-		bottom: 10px;
-	}
+    0%,
+    100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+    }
 }
+
+
 /* scrollbar start  */
 
 ::-webkit-scrollbar {
-	width: 8px;
-	height: 5px;
+    width: 8px;
+    height: 5px;
 }
 
 .middle {
-	position: relative;
+    position: relative;
 }
 
 .middle:before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: rgb(255, 255, 255);
-	visibility: hidden;
-	transform: scaleX(0);
-	transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
 }
 
 .middle:hover:before {
-	visibility: visible;
-	transform: scaleX(1);
+    visibility: visible;
+    transform: scaleX(1);
 }
+
+
 /* Track */
 
 ::-webkit-scrollbar-track {
-	background: #00222d;
+    background: #00222d;
 }
+
+
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-	background: #337d96;
+    background: #337d96;
 }
+
+
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #bebebe;
+    background: #bebebe;
 }
+
+
 /* scrollbar end  */
 
 .home {
@@ -84,15 +95,15 @@
 
 .heading-1 {
     padding-top: 2%;
-    
     background: -webkit-linear-gradient(#eee, rgb(216, 255, 250));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 250%;
     font-weight: 600;
     text-align: center;
     justify-content: center;
 }
+
 .mat-form-field-flex {
     padding: 0 .75em 0 .75em;
     margin-top: -0.25em;
@@ -111,7 +122,6 @@
 //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 //     border-radius: 25px;
 // }
-
 .signinbtn {
     background-color: #5776ff;
 }
@@ -130,67 +140,92 @@
     width: 100px;
     border-radius: 5px;
 }
+
 ::ng-deep .mat-focused .mat-form-field-label {
     /*change color of label*/
     color: white !important;
-   }
-  
-   ::ng-deep.mat-form-field-underline {
+}
+
+ ::ng-deep.mat-form-field-underline {
     /*change color of underline*/
     background-color: white !important;
-  } 
-  
-  
-  ::ng-deep.mat-form-field-ripple {
-   /*change color of underline when focused*/
-   background-color: white !important;;
-  }
-  .input1::placeholder{
-      color: white !important;
-  }
-  /* input color class */
+}
+
+ ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+    ;
+}
+
+.input1::placeholder {
+    color: white !important;
+}
+
+
+/* input color class */
+
 ::ng-deep input.mat-input-element {
     color: #484a4c;
-  }
-  
-  /* Change label color on focused */
-  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+}
+
+
+/* Change label color on focused */
+
+ ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
     color: #50d0fb !important;
-  }
-  .ng-tns-c69-1 .ng-star-inserted {
-      color: white !important;
-  }
-  .ng-tns-c69-0 .ng-star-inserted{
-      color: white !important;
-  }
-  .ng-tns-c69-2 .ng-star-inserted{
-      color: white !important;
-  }
-  /* underline border color on focused */
-  ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+}
+
+.ng-tns-c69-1 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c69-0 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c69-2 .ng-star-inserted {
+    color: white !important;
+}
+
+
+/* underline border color on focused */
+
+ ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
     background-color: #50d0fb !important;
-  }
-  .mat-input-element::placeholder .mat-form-field-autofill-control::placeholder{
-color: white !important;
-  }
-  .mat-form-field-appearance-outline .mat-form-field-flex {
+}
+
+.mat-input-element::placeholder .mat-form-field-autofill-control::placeholder {
+    color: white !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
     padding: 0 .75em 0 .75em;
     margin-top: -0.25em;
     position: relative;
     border: white 2px solid;
 }
-.hide{
+
+.hide {
     display: none;
 }
-@media (max-width: 992px) {}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    margin-bottom: 5vh;
+}
+
+.ng-tns-c71-0 {
+    color: white;
+}
 
 @media (max-width: 768px) {
     .heading-1 {
         padding-top: 2%;
         font-size: 170%;
     }
-    .login-img1{
-        height:50vh;
+    .login-img1 {
+        height: 50vh;
     }
 }
 
@@ -200,13 +235,12 @@ color: white !important;
         font-size: 180%;
     }
     .container {
-        
         width: 80vw;
         height: 75vh;
         border-radius: 25px;
     }
-    .login-img1{
-        height:30vh;
+    .login-img1 {
+        height: 30vh;
         padding-top: 5%;
     }
 }

@@ -4,8 +4,8 @@
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb details2" class="main-breadcrumb">
             <ol class="breadcrumb details2">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="profile-auth">User</a></li>
+                <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/profile-auth">User</a></li>
                 <li class="breadcrumb-item active" aria-current="page">User Profile</li>
             </ol>
         </nav>
@@ -18,7 +18,7 @@
                         <div class="d-flex flex-column align-items-center text-center">
                             <img src="../../assets/images/customer-1.png" alt="Admin" class="rounded-circle" width="150">
                             <div class="mt-3">
-                                <h4>{{ applicant.name }}</h4>
+                                <h4 class="black">{{ applicant.name }}</h4>
 
                                 <p class="text-muted font-size-sm">{{applicant.year}} Year</p>
                             </div>
@@ -28,19 +28,19 @@
                 <div class="card mt-3">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[0].value">
-                            <h6 class="mb-0"><img src="../../assets/images/github.png" width="24" height="24" class="feather feather-instagram mr-2 icon-inline text-danger">Github</h6>
+                            <h6 class="mb-0"><img src="../../assets/images/github.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger" style="color: black;">Github</h6>
                             <span class="text-black">{{applicant.domain[0].value}}</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[1].value">
-                            <h6 class="mb-0"><img src="../../assets/images/behance.png" width="24" height="24" class="feather feather-instagram mr-2 icon-inline text-danger">Behance</h6>
+                            <h6 class="mb-0"><img src="../../assets/images/behance.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Behance</h6>
                             <span class="text-black">{{applicant.domain[1].value}}</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[2].value">
-                            <h6 class="mb-0"><img src="../../assets/images/medium.png" width="24" height="24" class="feather feather-instagram mr-2 icon-inline text-danger">Medium</h6>
+                            <h6 class="mb-0"><img src="../../assets/images/medium.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Medium</h6>
                             <span class="text-black">{{applicant.domain[2].value}}</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[3].value">
-                            <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" class="feather feather-instagram mr-2 icon-inline text-danger">Instagram</h6>
+                            <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram</h6>
                             <span class="text-black">{{applicant.domain[3].value}}</span>
                         </li>
                     </ul>
@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-xl-12 col-lg-12 col-md-12">
                         <div class="d-flex justify-content-center">
-                            <img class="social-svg"src="../../assets/images/profile-details.svg">
+                            <img class="social-svg" src="../../assets/images/profile-details.svg">
                         </div>
                     </div>
                 </div>
@@ -105,33 +105,37 @@
 
                     </div>
                 </div>
-               
+
                 <div class="col-sm-12 mb-12">
                     <h2 class="text-center text">Application Status</h2>
                 </div>
-               <div *ngFor="let n of applicant.domain">
-                <div class="row gutters-sm d-flex justify-content-center cp" *ngIf="n.select === true">
-                    <div class="col-sm-12 col-md-8 " >
-                        <div class="card h-100">
-                            <div class="card-body"*ngIf="n.select === true" >
-                                <div class="d-flex justify-content-center">
-                                <h3 class="d-flex align-items-center text-center mb-3 domain " ><i class="material-icons text-info mr-2">assignment</i>{{n.name}}</h3>
-                                 </div>
-                                <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div *ngIf="n.isShortlisted === true">
-                                    <div class="d-flex justify-content-center"> <h3 class=" badge badge-success ">Selected</h3></div>
-                                   
-                                </div>
-                                <div *ngIf="n.isShortlisted === false">
-                                    <div class="d-flex justify-content-center"> <h3 class="badge badge-warning d-flex justify-content-center">Pending</h3></div>
+                <div *ngFor="let n of applicant.domain">
+                    <div class="row gutters-sm d-flex justify-content-center cp" *ngIf="n.select === true">
+                        <div class="col-sm-12 col-md-8 ">
+                            <div class="card h-100">
+                                <div class="card-body" *ngIf="n.select === true">
+                                    <div class="d-flex justify-content-center">
+                                        <h3 class="d-flex align-items-center text-center mb-3 domain "><i class="material-icons text-info mr-2">assignment</i>{{n.name}}</h3>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 5px">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div *ngIf="n.isShortlisted === true">
+                                        <div class="d-flex justify-content-center">
+                                            <h3 class=" badge badge-success ">Selected</h3>
+                                        </div>
+
+                                    </div>
+                                    <div *ngIf="n.isShortlisted === false">
+                                        <div class="d-flex justify-content-center">
+                                            <h3 class="badge badge-warning d-flex justify-content-center">Pending</h3>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-            </div>
+                </div>
 
             </div>
         </div>
