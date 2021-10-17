@@ -12,6 +12,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ApplicantDetailsComponent } from './applicant-details/applicant-details.component';
 import { ProfileAuthComponent } from './profile-auth/profile-auth.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
     AdminComponent,
     ApplicantDetailsComponent,
     ProfileAuthComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

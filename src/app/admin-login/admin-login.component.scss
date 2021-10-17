@@ -21,6 +21,8 @@
 .unhide{
     display: block;
 }
+
+
 @keyframes MoveUpDown {
 	0%,
 	100% {
@@ -78,18 +80,6 @@
 .home {
     background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
     min-height: 110vh;
-}
-
-.ng-tns-c71-0 .ng-star-inserted{
-color:white !important;
-}
-
-.ng-tns-c71-1 .ng-star-inserted{
-color: white !important;
-}
-
-.ng-tns-c71-2 .ng-star-inserted{
-color: white !important
 }
 
 .heading-1 {
@@ -191,9 +181,6 @@ color: white !important;
 }
 .hide{
     display: none;
-}
-.container{
-    margin-top: 10vh;
 }
 @media (max-width: 992px) {}
 
