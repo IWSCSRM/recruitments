@@ -4,45 +4,45 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-        <div class="logo grow d-flex justify-content-center">
-            <img src="../../assets/images/logo.png" alt="IWSC" width="80" height="80">
-        </div>
-        <div class="fieldBox">
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label class="input1">Email</mat-label>
-                    <input class="input1" ngModel matInput [pattern]="emailPattern" placeholder="abc@xyz.com" required [(ngModel)]="profileAuth.emailId" name="emailId">
-                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-                </mat-form-field>
-            </p>
-            <!-- <p>
+                <div class="logo grow d-flex justify-content-center">
+                    <img src="../../assets/images/logo.png" alt="IWSC" width="80" height="80">
+                </div>
+                <div class="fieldBox">
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label class="input1">Email</mat-label>
+                            <input class="input1" ngModel matInput [pattern]="emailPattern" placeholder="abc@xyz.com" required [(ngModel)]="profileAuth.emailId" name="emailId">
+                            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                        </mat-form-field>
+                    </p>
+                    <!-- <p>
                 <mat-form-field appearance="outline">
                     <mat-label class="input1">Phone No.</mat-label>
                     <input class="input1" ngModel type="number" maxlength="10" matInput placeholder="999877XX70" required [(ngModel)]="profileAuth.num" name="num">
 
                 </mat-form-field>
             </p> -->
-            <h4 class="{{ hide }}" style="color: white;">Please Check Your Email Id</h4>
-            <p class="{{hide}}">
-                <mat-form-field appearance="outline">
-                    <mat-label class="input1">OTP</mat-label>
-                    <input  class="input1" ngModel type="password" matInput placeholder="One Time Password" required [(ngModel)]="profileAuth.otp" name="otp">
-                </mat-form-field>
-            </p>
-            <div class="d-flex justify-content-center">
-            <button type="button" class="grow btn  btn-primary signinbtn {{unhide}}" (click)="toggle()">Send OTP</button>
-            </div>
-            <div class="d-flex justify-content-center">
-            <button type="button" class="grow btn btn-primary signinbtn {{hide}}" (click)="onSubmit()">Validate</button>
-            </div>
+                    <h4 class="{{ hide }}" style="color: white;">Please Check Your Email Id</h4>
+                    <p class="{{hide}}">
+                        <mat-form-field appearance="outline">
+                            <mat-label class="input1">OTP</mat-label>
+                            <input class="input1" ngModel type="password" matInput placeholder="One Time Password" required [(ngModel)]="profileAuth.otp" name="otp">
+                        </mat-form-field>
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="grow btn  btn-primary signinbtn {{unhide}}" (click)="toggle() " (keyup.enter)="toggle()">Send OTP</button>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="grow btn btn-primary signinbtn {{hide}}" (click)="onSubmit()">Validate</button>
+                    </div>
 
-        </div>
-        </div>
-        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-            <div class="login-img d-flex justify-content-center">
-                <img class="login-img1" src="../../assets/images/login.svg">
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+                <div class="login-img d-flex justify-content-center">
+                    <img class="login-img1" src="../../assets/images/login.svg">
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
