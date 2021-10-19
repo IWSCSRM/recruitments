@@ -5,14 +5,9 @@
     width: 100%;
     margin-bottom: 0;
 }
-.banner{
-    width: 30rem;
-    // float: right;
-    // padding-right: 50px;
-    position: relative;
-    top: 0%;
+
     
-}
+
 // .header{
 //     background-color: black;
 //     position: absolute;
@@ -27,13 +22,23 @@
 // line-height: 73px;
 // }
 .form-area{
-    position: absolute;
+    // position: absolute;
     // background-color: rgb(254, 255, 255);
     // margin-top: 100px;
     width: 100vw;
     height: 1244px;
     padding-left: 30px;
     padding-top: 100px;
+    
+
+
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+       
 
 
 }
@@ -46,9 +51,9 @@
     
     // background-color: #63c9cc;
  }
- .input-fields:active{
-     background-color: rgb(255, 255, 255);
- }
+//  .input-fields:active{
+//      background-color: rgb(255, 255, 255);
+//  }
 //  .input-fields:focus{
 //      background-color: gray;
 //  }
@@ -85,18 +90,58 @@
 .ng-tns-c71-5{
     color: white;
 }
+.image-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    // max-width: 100%;
+    height: auto;
+    margin-left: 200px;
+    margin-top: 70px;
+    padding-top: 40px;
+
+    // padding-left: 200px;
+    // padding-right: 100px;
+}
+.checkbox{
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    
+}
+.form-checkbox-input{
+margin-left: 5rem;
+border-radius: 100%;
+}
+
+.ng-tns-c71-6{
+    color: white;
+}
+.ng-tns-c71-7{
+    color: white;
+}
+.ng-tns-c71-8{
+    color: white;
+}
+.ng-tns-c71-9{
+    color: white;
+}
+.ng-tns-c71-10{
+    color: white;
+}
+
 
 @media only screen and (max-device-width: 600px) {
 
-    
-    
-    .banner{
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;
-
-        padding-bottom: 20px;
+    .mobile-row-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
     }
+
     .form-area{
         width: 100vw;
         margin-left: 0%;
@@ -107,5 +152,35 @@
         position: relative;
         // margin: 10px 0 0 10px;
     }
+    .image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     
+}
+@media only screen and (max-device-width: 768px){
+
+    .mobile-row-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+    }
+
+
 }

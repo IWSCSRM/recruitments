@@ -1,95 +1,93 @@
 <div class="container " >
-  <div class="row">
-
+  
+  <div class="row mobile-row-wrapper ">
+    <div class=" col-lg-6 col-md-12 col-sm-12 col-xs-6"  >
+      <form class="form-area" #recruitmentForm = "ngForm" (ngSubmit)="onSubmit()">
+      
+        <div class=" row input-wrapper">
+         <p>
+             <mat-form-field class="input-fields" appearance="outline">
+               <mat-label>Name</mat-label>
+               <input class="input-fields" matInput placeholder="Name"
+               [(ngModel)]="applicant.name" name="name" required>
+             </mat-form-field>
+           </p>
+           <p>
+             <mat-form-field class="input-fields" appearance="outline">
+               <mat-label>Branch</mat-label>
+               <input matInput placeholder="Branch"
+               [(ngModel)]="applicant.branch" name="branch" required>
+             </mat-form-field>
+           </p>
+           <p>
+             <mat-form-field class="input-fields" appearance="outline">
+               <mat-label>Registration Number</mat-label>
+               <input matInput placeholder="Registration Number"
+               [(ngModel)]="applicant.registrationNo" name="Registration Number" required>
+             </mat-form-field>
+           </p>
+           <p>
+             <mat-form-field class="input-fields" appearance="outline">
+               <mat-label>Year</mat-label>
+               <input matInput placeholder="Year of Study"
+               [(ngModel)]="applicant.year" name="year" required>
+             </mat-form-field>
+           </p>
+           <p>
+             <mat-form-field class="input-fields" appearance="outline">
+               <mat-label>Mobile</mat-label>
+               <input matInput placeholder="Mobile"
+               [(ngModel)]="applicant.mobileNo" name="moblie" required>
+             </mat-form-field>
+           </p>
+           <p>
+             <mat-form-field class="input-fields" appearance="outline">
+               <mat-label>Email Id</mat-label>
+               <input matInput placeholder="Email Id"
+               [(ngModel)]="applicant.emailId" name="emailId" required>
+             </mat-form-field>
+           </p>
+           </div>
+           <div class="row">
+             <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center"> -->
+           <p>
+             
+             <tr *ngFor="let n of applicant.domain">
+               <th scope="row">
+                 <input class="form-checkbox-input" type="checkbox" [value] = "n.id"
+                   (change)= "onChecking($event)" 
+                 />
+               </th>
+               <div class="checkbox">
+               <td>{{n.name}}</td>
+               
+               <td> 
+                 <mat-form-field class="input-fields-box" *ngIf="n.select" id="n.id" appearance="outline">
+                     <mat-label>Domain Info</mat-label>
+                     <input matInput [(ngModel)] = "n.value" type="text" placeholder="domain information"
+                     name = "{{n.name}}" value="{{n.value}}">
+                 </mat-form-field>
+               </td>
+               </div>
+             </tr>
+           </p>
+         <!-- </div> -->
+         </div>
+         <div class="button">
+           <button class="button" type="button" type="submit" class="btn btn-primary"[disabled]="!recruitmentForm.valid">Submit</button>
+          </div> 
+     </form>
+      
+     </div>
             
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"  >
+    <div class=" col-lg-6 col-md-12 col-sm-12 col-xs-6 col-xl-6 w-100"  >
+      <div class="image-wrapper">
     
-      <img class="banner" src="../../assets/images/Hiring-amico.svg" alt="image">
+      <img  src="../../assets/images/Hiring-amico.svg" alt="image">
+      </div>
      </div>
      
     </div>
-  <div class="row">
-
   
-  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 "  >
-  
-   
-    <form class="form-area" #recruitmentForm = "ngForm" (ngSubmit)="onSubmit()">
-      
-       <div class=" row">
-        <p>
-            <mat-form-field class="input-fields" appearance="outline">
-              <mat-label>Name</mat-label>
-              <input class="input-fields" matInput placeholder="Name"
-              [(ngModel)]="applicant.name" name="name" required>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field class="input-fields" appearance="outline">
-              <mat-label>Branch</mat-label>
-              <input matInput placeholder="Branch"
-              [(ngModel)]="applicant.branch" name="branch" required>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field class="input-fields" appearance="outline">
-              <mat-label>Registration Number</mat-label>
-              <input matInput placeholder="Registration Number"
-              [(ngModel)]="applicant.registrationNo" name="Registration Number" required>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field class="input-fields" appearance="outline">
-              <mat-label>Year</mat-label>
-              <input matInput placeholder="Year of Study"
-              [(ngModel)]="applicant.year" name="year" required>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field class="input-fields" appearance="outline">
-              <mat-label>Mobile</mat-label>
-              <input matInput placeholder="Mobile"
-              [(ngModel)]="applicant.mobileNo" name="moblie" required>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field class="input-fields" appearance="outline">
-              <mat-label>Email Id</mat-label>
-              <input matInput placeholder="Email Id"
-              [(ngModel)]="applicant.emailId" name="emailId" required>
-            </mat-form-field>
-          </p>
-          </div>
-          <div class="row">
-            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center"> -->
-          <p>
-            
-            <tr *ngFor="let n of applicant.domain">
-              <th scope="row">
-                <input class="form-checkbox-input" type="checkbox" [value] = "n.id"
-                  (change)= "onChecking($event)" 
-                />
-              </th>
-              
-              <td>{{n.name}}</td>
-              <div>
-              <td> 
-                <mat-form-field class="input-fields-box" *ngIf="n.select" id="n.id" appearance="outline">
-                    <mat-label>Domain Info</mat-label>
-                    <input matInput [(ngModel)] = "n.value" type="text" placeholder="domain information"
-                    name = "{{n.name}}" value="{{n.value}}">
-                </mat-form-field>
-              </td>
-              </div>
-            </tr>
-          </p>
-        <!-- </div> -->
-        </div>
-        <div class="button">
-          <button class="button" type="button" type="submit" class="btn btn-primary"[disabled]="!recruitmentForm.valid">Submit</button>
-         </div> 
-    </form>
-  </div>
-</div>
 </div>
 
