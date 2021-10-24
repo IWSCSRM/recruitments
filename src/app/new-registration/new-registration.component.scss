@@ -1,0 +1,186 @@
+
+.container{
+    margin-left: 0px;
+    // margin-right: 0%;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+    
+
+// .header{
+//     background-color: black;
+//     position: absolute;
+// width: 800px;
+// height: 100px;
+
+// text-align: center;
+
+
+// font-family: Montserrat;
+// font-size: 60px;
+// line-height: 73px;
+// }
+.form-area{
+    // position: absolute;
+    // background-color: rgb(254, 255, 255);
+    // margin-top: 100px;
+    width: 100vw;
+    height: 1244px;
+    padding-left: 30px;
+    padding-top: 100px;
+    
+
+
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+       
+
+
+}
+.input-fields{
+    // width: 300px;
+    position: relative;
+    margin: 10px 0 0 10px;
+    width: 100vw;
+    display: block;
+    
+    // background-color: #63c9cc;
+ }
+//  .input-fields:active{
+//      background-color: rgb(255, 255, 255);
+//  }
+//  .input-fields:focus{
+//      background-color: gray;
+//  }
+   
+.button{
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+   
+.mat-form-field{
+    width: 600px;
+}
+.input-fields-box{
+    margin-left: 20px;
+    padding-left: 20px;
+}
+.input-fields .ng-tns-c71-0 {
+    color: white ;
+}
+.ng-tns-c71-1{
+    color: white;
+}
+.ng-tns-c71-2{
+    color: white;
+}
+.ng-tns-c71-3{
+    color: white;
+}
+.ng-tns-c71-4{
+    color: white;
+}
+.ng-tns-c71-5{
+    color: white;
+}
+.image-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    // max-width: 100%;
+    height: auto;
+    margin-left: 200px;
+    margin-top: 70px;
+    padding-top: 40px;
+
+    // padding-left: 200px;
+    // padding-right: 100px;
+}
+.checkbox{
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    
+}
+.form-checkbox-input{
+margin-left: 5rem;
+border-radius: 100%;
+}
+
+.ng-tns-c71-6{
+    color: white;
+}
+.ng-tns-c71-7{
+    color: white;
+}
+.ng-tns-c71-8{
+    color: white;
+}
+.ng-tns-c71-9{
+    color: white;
+}
+.ng-tns-c71-10{
+    color: white;
+}
+
+
+@media only screen and (max-device-width: 600px) {
+
+    .mobile-row-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .form-area{
+        width: 100vw;
+        margin-left: 0%;
+        padding-top: 0px;
+    }
+    .input-fields{
+        width: 300px;
+        position: relative;
+        // margin: 10px 0 0 10px;
+    }
+    .image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+}
+@media only screen and (max-device-width: 768px){
+
+    .mobile-row-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+    }
+
+
+}
