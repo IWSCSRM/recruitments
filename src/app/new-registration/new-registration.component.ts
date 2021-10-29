@@ -12,15 +12,22 @@ import { Applicants } from '../applicants';
 export class NewRegistrationComponent implements OnInit {
 
   applicant : Applicants = new Applicants();
+  link:any =[
+    "Github Link",
+    "Behance Link",
+    "Medium Link",
+    "Instagram Link"
+  ]
   constructor(private applicantService : ApplicantServiceService, private router : Router) {
   }
+
 
   ngOnInit(): void {
     this.applicant.domain = [
       {id: 1, select : false, name : 'Technical', value : "", isShortlisted : false},
-      {id: 2, select : false, name : 'GraphicD', value : "", isShortlisted : false},
-      {id: 3, select : false, name : 'content', value : "", isShortlisted : false},
-      {id: 4, select : false, name : 'creatives', value : "", isShortlisted : false},
+      {id: 2, select : false, name : 'Graphics', value : "", isShortlisted : false},
+      {id: 3, select : false, name : 'Content', value : "", isShortlisted : false},
+      {id: 4, select : false, name : 'Creatives', value : "", isShortlisted : false},
     ];
   }
   postDetails(){

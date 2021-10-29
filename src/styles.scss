@@ -28,6 +28,37 @@ input.mat-input-element {
     color: white !important;
 }
 
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #50d0fb !important;
+}
+
+.ng-tns-c69-1 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c69-0 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c69-2 .ng-star-inserted {
+    color: white !important;
+}
+
+.input1::placeholder {
+    color: white !important;
+}
+
+.ng-tns-c71-3 .ng-star-inserted,
+.ng-tns-c71-4,
+.ng-tns-c71-5,
+.ng-tns-c71-6,
+.ng-tns-c71-7,
+.ng-tns-c71-8,
+.ng-tns-c71-9,
+.ng-tns-c71-10 {
+    color: white !important;
+}
+
 @keyframes MoveUpDown {
     0%,
     100% {

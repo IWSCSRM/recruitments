@@ -1,186 +1,312 @@
-
-.container{
-    margin-left: 0px;
-    // margin-right: 0%;
-    width: 100%;
-    margin-bottom: 0;
+.grow {
+    transition: all .2s ease-in-out;
 }
 
-    
-
-// .header{
-//     background-color: black;
-//     position: absolute;
-// width: 800px;
-// height: 100px;
-
-// text-align: center;
-
-
-// font-family: Montserrat;
-// font-size: 60px;
-// line-height: 73px;
-// }
-.form-area{
-    // position: absolute;
-    // background-color: rgb(254, 255, 255);
-    // margin-top: 100px;
-    width: 100vw;
-    height: 1244px;
-    padding-left: 30px;
-    padding-top: 100px;
-    
-
-
+.grow:hover {
+    transform: scale(1.1);
 }
-.input-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-       
 
-
+// Animations 
+.rotate {
+    transition: transform 0.5s ease-in-out;
 }
-.input-fields{
-    // width: 300px;
-    position: relative;
-    margin: 10px 0 0 10px;
-    width: 100vw;
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+.object {
+    animation: MoveUpDown 3s linear infinite;
+    position: absolute;
+}
+
+.unhide {
     display: block;
-    
-    // background-color: #63c9cc;
- }
-//  .input-fields:active{
-//      background-color: rgb(255, 255, 255);
-//  }
-//  .input-fields:focus{
-//      background-color: gray;
-//  }
-   
-.button{
-    width:20%;
-    margin-left:auto;
-    margin-right:auto;
-    
 }
-   
-.mat-form-field{
-    width: 600px;
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+    }
 }
-.input-fields-box{
-    margin-left: 20px;
-    padding-left: 20px;
+
+
+/* scrollbar start  */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
 }
-.input-fields .ng-tns-c71-0 {
-    color: white ;
+
+.middle {
+    position: relative;
 }
-.ng-tns-c71-1{
+
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.middle:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.mat-input-element::placeholder .mat-form-field-autofill-control::placeholder {
+    color: white !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    position: relative;
+    border: white 2px solid;
+}
+
+.input1::placeholder {
+    color: white !important;
+}
+
+.forminput {
     color: white;
 }
-.ng-tns-c71-2{
-    color: white;
+
+.middle:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
 }
-.ng-tns-c71-3{
-    color: white;
+
+.checkbox {
+    margin-bottom: 2vh;
 }
-.ng-tns-c71-4{
-    color: white;
+
+.checkbox td {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 2vh;
 }
-.ng-tns-c71-5{
-    color: white;
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #00222d;
 }
-.image-wrapper{
-    display: flex;
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #337d96;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bebebe;
+}
+
+
+/* scrollbar end  */
+
+.home {
+    background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
+    min-height: 110vh;
+}
+
+.ng-tns-c71-0 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c71-1 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c71-2 .ng-star-inserted {
+    color: white !important
+}
+
+.heading-1 {
+    margin-top: 2%;
+    padding-bottom: 2%;
+    background: -webkit-linear-gradient(#eee, rgb(216, 255, 250));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 250%;
+    font-weight: 600;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    width: 90%;
-    // max-width: 100%;
-    height: auto;
-    margin-left: 200px;
-    margin-top: 70px;
-    padding-top: 40px;
-
-    // padding-left: 200px;
-    // padding-right: 100px;
-}
-.checkbox{
-    color: white;
-    padding: 5px;
-    font-size: 16px;
-    
-}
-.form-checkbox-input{
-margin-left: 5rem;
-border-radius: 100%;
 }
 
-.ng-tns-c71-6{
-    color: white;
+.mat-form-field-flex {
+    padding: 0 .75em 0 .75em;
+    margin-top: -0.25em;
+    position: relative;
+    border: white 3px solid !important;
 }
-.ng-tns-c71-7{
-    color: white;
+
+.logo {
+    padding-top: 4%;
 }
-.ng-tns-c71-8{
-    color: white;
+
+// .container {
+//     background-color: #ebebeb;
+//     width: 60vw;
+//     height: 80vh;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     border-radius: 25px;
+// }
+.signinbtn {
+    background-color: #5776ff;
 }
-.ng-tns-c71-9{
-    color: white;
+
+.signinbtn:hover {
+    background-color: #364aa7;
 }
-.ng-tns-c71-10{
-    color: white;
+
+.fieldBox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 5px;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+}
+
+ ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+}
+
+ ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: white !important;
+    ;
+}
+
+.input1::placeholder {
+    color: white !important;
 }
 
 
-@media only screen and (max-device-width: 600px) {
+/* input color class */
 
-    .mobile-row-wrapper{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        
+::ng-deep input.mat-input-element {
+    color: #484a4c;
+}
+
+
+/* Change label color on focused */
+
+ ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #50d0fb !important;
+}
+
+.ng-tns-c69-1 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c69-0 .ng-star-inserted {
+    color: white !important;
+}
+
+.ng-tns-c69-2 .ng-star-inserted {
+    color: white !important;
+}
+
+
+/* underline border color on focused */
+
+ ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: #50d0fb !important;
+}
+
+.mat-input-element::placeholder .mat-form-field-autofill-control::placeholder {
+    color: white !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 .75em 0 .75em;
+    margin-top: -0.25em;
+    position: relative;
+    border: white 2px solid;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin-top: 10vh;
+}
+
+.checkinputbox {
+    margin-left: 20px;
+}
+
+.ng-tns-c71-3 .ng-star-inserted,
+.ng-tns-c71-4,
+.ng-tns-c71-5,
+.ng-tns-c71-6,
+.ng-tns-c71-7,
+.ng-tns-c71-8,
+.ng-tns-c71-9,
+.ng-tns-c71-10 {
+    color: white !important;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 100% !important;
     }
-
-    .form-area{
-        width: 100vw;
-        margin-left: 0%;
-        padding-top: 0px;
+    .hireimg {
+        display: none;
     }
-    .input-fields{
-        width: 300px;
-        position: relative;
-        // margin: 10px 0 0 10px;
-    }
-    .image-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    
 }
-@media only screen and (max-device-width: 768px){
 
-    .mobile-row-wrapper{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        
+@media (max-width: 768px) {
+    .heading-1 {
+        padding-top: 2%;
+        font-size: 170%;
     }
-    .image-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
+    .login-img1 {
+        height: 50vh;
     }
+}
 
-
+@media (max-width: 576px) {
+    .heading-1 {
+        padding-top: 5%;
+        font-size: 180%;
+    }
+    .container {
+        width: 80vw;
+        height: 75vh;
+        border-radius: 25px;
+    }
+    .login-img1 {
+        height: 30vh;
+        padding-top: 5%;
+    }
+    .card {
+        margin-bottom: 5vh;
+    }
 }
