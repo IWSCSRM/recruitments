@@ -1,35 +1,52 @@
 <div class="container">
-    <tbody>
-        <tr>
-            <td>Name</td>
-            <td>{{ applicant.name }}</td>
+  <tbody>
+    <div class="container-2">
+      <h1 class="main-heading">Registration Details</h1>
+      <img class="registered-svg" src="../../assets/images/registered.svg" />
+      <tr>
+        <td class="fieldName">Name</td>
+        <td class="fieldValue">Ishita</td>
+        <!-- <td class="fieldValue">{{ applicant.name }}</td> -->
+      </tr>
+      <tr>
+        <td class="fieldName">Email Id</td>
+        <td class="fieldValue">ia6803@srmist.edu.in</td>
+        <!-- <td class="fieldValue">{{ applicant.emailId }}</td> -->
+      </tr>
+      <tr>
+        <td class="fieldName">Branch</td>
+        <td class="fieldValue">CSE Core</td>
+        <!-- <td class="fieldValue">{{ applicant.branch }}</td> -->
+      </tr>
+      <tr>
+        <td class="fieldName">Registration Number</td>
+        <td class="fieldValue">RA1911003010560</td>
+        <!-- <td class="fieldValue">{{ applicant.registrationNo }}</td> -->
+      </tr>
+      <tr>
+        <td class="fieldName">Year</td>
+        <td class="fieldValue">3rd</td>
+        <!-- <td class="fieldValue">{{ applicant.year }}</td> -->
+      </tr>
+      <tr>
+        <td class="fieldName">Mobile Number</td>
+        <td class="fieldValue">+919872284975</td>
+        <!-- <td class="fieldValue">{{ applicant.mobileNo }}</td> -->
+      </tr>
+      <div class="domain-applied">
+        <h2 class="heading">Domains Applied</h2>
+        <tr class="fieldName">
+          <!-- </tr> *ngFor="let n of applicant.domain"> -->
+          <td class="domains-container">Creatives</td>
+          <td class="domains-container">Technical</td>
+          <!-- <td class="domains-container" *ngIf="n.select === true">
+            {{ n.name }}Creatives
+          </td>
+          <td class="domains-container" *ngIf="n.select === true">
+            {{ n.value }}Technical
+          </td> -->
         </tr>
-        <tr>
-            <td>Email Id</td>
-            <td>{{ applicant.emailId }}</td>
-        </tr>
-        <tr>
-            <td>Branch</td>
-            <td>{{ applicant.branch }}</td>
-        </tr>
-        <tr>
-            <td>Registration Number</td>
-            <td>{{ applicant.registrationNo }}</td>
-        </tr>
-        <tr>
-            <td>Year</td>
-            <td>{{ applicant.year }}</td>
-        </tr>
-        <tr>
-            <td>Mobile Number</td>
-            <td>{{ applicant.mobileNo }}</td>
-        </tr>
-    </tbody>
-    <div class="domain-applied">
-        <h3>Domains Applied</h3>
-        <tr *ngFor="let n of applicant.domain">
-            <td *ngIf="n.select === true">{{ n.name }}</td>
-            <td *ngIf="n.select === true">{{ n.value }}</td>
-        </tr>
+      </div>
     </div>
+  </tbody>
 </div>
