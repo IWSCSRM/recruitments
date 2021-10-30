@@ -122,7 +122,6 @@
 
 .home {
     background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
-    min-height: 110vh;
 }
 
 .ng-tns-c71-0 .ng-star-inserted {
@@ -308,5 +307,6 @@
     }
     .card {
         margin-bottom: 5vh;
+        width: 100%;
     }
 }
