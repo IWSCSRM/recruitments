@@ -117,12 +117,15 @@ div.domain-applied h3 {
     div.domain-applied td.domains-container {
         margin: 0% 12% 0% 2% !important;
     }
+    .row {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 376px) {
     .container-2 {
         width: 80vw;
-        margin: 5% 4%;
     }
     img.registered-svg {
         height: 180px;
