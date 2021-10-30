@@ -123,7 +123,6 @@
 .home {
     //background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
     box-shadow: 0px -2px 9px 3px #0059ff73;
-
 }
 
 .ng-tns-c71-0 .ng-star-inserted {
@@ -292,12 +291,12 @@
     .login-img1 {
         height: 50vh;
     }
+    .last-button {
+        margin-bottom: 10vh;
+    }
 }
 
 @media (max-width: 576px) {
-    .home{
-        height: 60em;
-    }
     .heading-1 {
         padding-top: 5%;
         font-size: 180%;

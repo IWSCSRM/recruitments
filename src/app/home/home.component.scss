@@ -45,10 +45,6 @@ h2 {
     font-size: 24px;
 }
 
-.buttons-h {
-    margin-bottom: 10vh;
-}
-
 .footer {
     background: rgb(0, 0, 0);
     height: 20px;
@@ -56,29 +52,6 @@ h2 {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-#hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 30px;
-    justify-content: center !important;
-    text-align: center;
-    border-radius: 50px;
-    transition: 0.5s;
-    color: #3498db;
-    border: 2px solid #3498db;
-    height: 10vh;
-    width: 25vh;
-}
-
-#hero .btn-get-started:hover {
-    background: #3498db;
-    color: #fff;
-    text-decoration: none;
 }
 
 #hero .animated {
@@ -126,6 +99,13 @@ h2 {
     100% {
         transform: translateY(-10px);
     }
+}
+
+.buttons {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 5vh;
 }
 
 
@@ -226,9 +206,6 @@ section {
     }
     .image-home {
         margin-top: 300px;
-    }
-    #hero .btn-get-started {
-        margin-top: 7vh;
     }
     .footer {
         width: 100%;
