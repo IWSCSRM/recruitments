@@ -121,7 +121,9 @@
 /* scrollbar end  */
 
 .home {
-    background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
+    //background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
+    box-shadow: 0px -2px 9px 3px #0059ff73;
+
 }
 
 .ng-tns-c71-0 .ng-star-inserted {
@@ -181,8 +183,9 @@
 }
 
 .btn {
-    width: 100px;
+    width: 20em;
     border-radius: 5px;
+    margin-bottom: 2%;
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -254,7 +257,7 @@
 }
 
 .container {
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .checkinputbox {
@@ -292,14 +295,15 @@
 }
 
 @media (max-width: 576px) {
+    .home{
+        height: 60em;
+    }
     .heading-1 {
         padding-top: 5%;
         font-size: 180%;
     }
     .container {
-        width: 80vw;
-        height: 75vh;
-        border-radius: 25px;
+        margin-top: 2vh;
     }
     .login-img1 {
         height: 30vh;
@@ -308,5 +312,10 @@
     .card {
         margin-bottom: 5vh;
         width: 100%;
+    }
+    .btn {
+        width: 18em;
+        border-radius: 5px;
+        margin-bottom: 5%;
     }
 }
