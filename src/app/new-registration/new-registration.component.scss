@@ -47,7 +47,7 @@
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(163, 163, 163, 0.5);
     border-radius: 5px;
 }
 
@@ -122,7 +122,7 @@
 
 .home {
     //background: radial-gradient(circle, #1e24d6 0%, #0f151b 100%);
-    box-shadow: 0px -2px 9px 3px #0059ff73;
+    box-shadow: -1px -10px 14px 4px #0059ff69;
 
 }
 
@@ -160,7 +160,6 @@
 .logo {
     padding-top: 4%;
 }
-
 // .container {
 //     background-color: #ebebeb;
 //     width: 60vw;
@@ -169,7 +168,7 @@
 //     border-radius: 25px;
 // }
 .signinbtn {
-    background-color: #5776ff;
+    background-color: var(--primary);
 }
 
 .signinbtn:hover {
@@ -274,6 +273,8 @@
 .ng-tns-c71-10 {
     color: white !important;
 }
+
+
 
 @media (max-width: 992px) {
     .card {
