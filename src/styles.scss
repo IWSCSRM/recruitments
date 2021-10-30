@@ -112,6 +112,22 @@ input.ng-invalid.ng-dirty {
     box-shadow: #ff0055 !important;
 }
 
-::ng-deep {
-    color: white !important
+::ng-deep .mat-form-field-underline .mat-form-field-ripple {
+    background-color: white;
+}
+
+ ::ng-deep .mat-form-field-underline {
+    background-color: white;
+}
+
+ ::ng-deep .mat-form-field-placeholder {
+    color: white;
+}
+
+ ::ng-deep .mat-focused .mat-form-field-placeholder {
+    color: white;
+}
+
+.ng-tns-c71-11 .ng-star-inserted {
+    color: white;
 }
