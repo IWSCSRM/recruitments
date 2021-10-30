@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminServiceService } from '../admin-service.service';
 import { ApplicantServiceService } from '../applicant-service.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ApplicantServiceService } from '../applicant-service.service';
 export class AdminLoginComponent implements OnInit {
   adminObj = {};
   pass ! : String;
-  constructor(private applicantService : ApplicantServiceService, private router: Router) { }
+  constructor(private applicantService : ApplicantServiceService, private router: Router, private adminService : AdminServiceService) { }
   
   ngOnInit(): void {
     
@@ -21,6 +22,8 @@ export class AdminLoginComponent implements OnInit {
     };
     this.applicantService.postDetailsForAdminLogin(this.adminObj).subscribe((data) => {
       localStorage.setItem('token', data.token);
+      this.adminService.password = this.pass;
+      this.adminService.token = data.token;
       this.router.navigate(['/admin-iwsc']);
     },
     (Error) => {alert("Incorrect Password");}
