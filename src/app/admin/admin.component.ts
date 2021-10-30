@@ -22,9 +22,7 @@ export class AdminComponent implements OnInit {
     if(this.adminService.password != undefined && this.adminService.token != undefined){
       this.applicantService.getDetails().subscribe(data => {
         this.applicant = data.user;
-        console.log(data);
       });
-      console.log(this.applicant);
     }
   }
 

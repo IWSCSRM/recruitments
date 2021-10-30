@@ -35,7 +35,7 @@ export class NewRegistrationComponent implements OnInit {
       this.applicant = data.user;
       this.router.navigate(['/registered', this.applicant._id]);
     },
-    error => console.log(error));
+    error => alert(error));
   }
 
   onChecking($event :any){
