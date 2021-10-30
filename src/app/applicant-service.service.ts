@@ -8,7 +8,7 @@ import { Applicants } from './applicants';
 })
 export class ApplicantServiceService {
 
-  private baseUrl = 'https://vast-beach-10869.herokuapp.com/api/';
+  private baseUrl = 'https://iwscsrm-recruitment.herokuapp.com/api/';
   constructor(private httpClient: HttpClient) { }
 
   //get by id
