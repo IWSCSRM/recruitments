@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home',component: HomeComponent},
   {path: 'apply', component: NewRegistrationComponent},
   {path: 'registered/:id', component: SuccessfulRegisterationComponent},

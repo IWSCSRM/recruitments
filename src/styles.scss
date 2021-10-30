@@ -127,7 +127,6 @@ html,
 body {
     height: 100%;
     background: radial-gradient(circle, #0e13be 0%, #0f151b 100%);
-    // color: white;
 }
 
 body {
@@ -139,4 +138,8 @@ input.ng-invalid.ng-dirty {
     border-bottom-color: #ff0055 !important;
     border-bottom: solid 3px;
     box-shadow: #ff0055 !important;
+}
+
+::ng-deep {
+    color: white !important
 }
