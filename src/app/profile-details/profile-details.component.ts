@@ -19,7 +19,7 @@ export class ProfileDetailsComponent implements OnInit {
     this.applicantService.getDetailsById(this.id).subscribe((data) => {
       this.applicant = data.user[0];
     },
-    (error) => {console.log(error)}
+    (error) => {alert(error)}
     );
   }
 

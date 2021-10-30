@@ -17,10 +17,9 @@ export class SuccessfulRegisterationComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.applicantService.getDetailsById(this.id).subscribe(data  => {
-      console.log(data);
       this.applicant = data.user[0];
     },
-    error => console.log(error));
+    error => alert(error));
   }
 
 }
