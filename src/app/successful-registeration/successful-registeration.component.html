@@ -1,4 +1,5 @@
 <div class="container">
+
     <tbody>
         <div class="container-2">
             <h1 class="main-heading">Registration Details</h1>
@@ -31,12 +32,21 @@
                 <h2 class="heading">Domains Applied</h2>
                 <div class="fieldName" *ngFor="let n of applicant.domain">
                     <h3 class="domains-container d-flex justify-content-center" *ngIf="n.select === true">
-                        {{ n.name }} - {{ n.value }}
+                        {{ n.name }} -
+                        <a class="link" [href]="n.value" target="_blank"> {{n.value}}</a>
                     </h3>
 
                 </div>
             </div>
             <br>
+            <div class="d-flex justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4 route">
+                    <button type="button" routerLink="/profile-auth" class="btn btn-outline-primary buttons"> Check Your Status</button>
+                </div>
+            </div>
+            <br>
         </div>
+
     </tbody>
+
 </div>
