@@ -3,11 +3,31 @@
     width: 100vw;
 }
 
+a:visited {
+    color: pink;
+}
+
+.link {
+    color: white;
+    text-decoration: blue;
+    overflow: scroll;
+}
+
+.domains-container {
+    padding: 10px 15px;
+    margin-top: 5vh !important;
+    margin-bottom: 5px;
+    min-height: 45px;
+    border-radius: 5px;
+    // min-width: 190px;
+    background: radial-gradient(circle, #33357cd0 0%, #0f151bf0 100%);
+}
+
 .container-2 {
-    margin: 5% 20%;
-    padding: 0% 5%;
+    // margin: 5% 5%;
+    // padding: 0% 5%;
     background-color: rgba(235, 235, 235, 0.75);
-    width: 60vw;
+    width: 70%;
     min-height: 150vh;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(16px) saturate(180%);
@@ -50,7 +70,7 @@ img.registered-svg {
 
 div.domain-applied h3 {
     padding: 10px 15px;
-    margin-top: 10vh !important;
+    margin-top: 5vh !important;
     margin-bottom: 5px;
     min-height: 45px;
     // min-width: 190px;
@@ -69,21 +89,21 @@ div.domain-applied h3 {
 }
 
 @media only screen and (min-width: 1439px) {
-    .container-2 {
-        width: 275%;
-        height: 85vh;
-    }
-    img.registered-svg {
-        height: 350px;
-        position: absolute;
-        right: 80px;
-    }
+    // .container-2 {
+    //     width: 100%;
+    //     height: 85vh;
+    // }
+    // img.registered-svg {
+    //     height: 350px;
+    //     position: absolute;
+    //     right: 80px;
+    // }
 }
 
 @media only screen and (max-width: 769px) {
     .container-2 {
-        width: 145%;
-        height: 145vh;
+        // width: 145%;
+        min-height: 145vh;
         margin: 5% 13%;
     }
     img.registered-svg {
@@ -93,8 +113,8 @@ div.domain-applied h3 {
 
 @media only screen and (max-width: 426px) {
     .container-2 {
-        width: 145%;
-        height: 125vh;
+        // width: 145%;
+        min-height: 125vh;
         margin: 5% 2%;
     }
     img.registered-svg {
@@ -143,3 +163,40 @@ div.domain-applied h3 {
         font-size: 10px;
     }
 }
+
+
+/* scrollbar start  */
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.middle:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: blue;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: blue;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+
+/* scrollbar end  */

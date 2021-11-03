@@ -39,7 +39,7 @@ export class NewRegistrationComponent implements OnInit {
       this.applicant = data.user;
       this.router.navigate(['/registered', this.applicant._id]);
     },
-    error => alert(error));
+    error => alert("User with details already exist Or invalid details"));
   }
 
   onChecking($event :any){

@@ -1,8 +1,10 @@
-<div class="container">
-    <tbody>
-        <div class="container-2">
-            <h1 class="main-heading">Registration Details</h1>
-            <img class="registered-svg" src="../../assets/images/success-register.svg" />
+<div class="container-fluid d-flex justify-content-center">
+
+
+    <div class="container-2">
+        <h1 class="main-heading">Registration Details</h1>
+        <img class="registered-svg" src="../../assets/images/success-register.svg" />
+        <tbody>
             <tr>
                 <td class="fieldName">Name</td>
                 <td class="fieldValue">{{ applicant.name }}</td>
@@ -27,16 +29,29 @@
                 <td class="fieldName">Mobile Number</td>
                 <td class="fieldValue">{{ applicant.mobileNo }}</td>
             </tr>
-            <div class="domain-applied">
-                <h2 class="heading">Domains Applied</h2>
-                <div class="fieldName" *ngFor="let n of applicant.domain">
-                    <h3 class="domains-container d-flex justify-content-center" *ngIf="n.select === true">
-                        {{ n.name }} - {{ n.value }}
-                    </h3>
+        </tbody>
+        <div class="domain-applied">
+            <h2 class="heading">Domains Applied</h2>
+            <div class="fieldName" *ngFor="let n of applicant.domain">
+                <div class="domains-container">
+                    <h3 class=" d-flex justify-content-center" *ngIf="n.select === true">
+                        {{ n.name }} :</h3>
 
+                    <p> <a class="link d-flex justify-content-center" [href]="n.value" target="_blank"> {{n.value}}</a></p>
                 </div>
+
+
             </div>
-            <br>
         </div>
-    </tbody>
+        <br>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <button type="button" routerLink="/profile-auth" class="btn btn-outline-primary buttons"> Check Your Status</button>
+            </div>
+        </div>
+        <br>
+    </div>
+
+
+
 </div>
