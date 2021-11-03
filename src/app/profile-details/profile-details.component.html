@@ -43,6 +43,14 @@
                             <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram</h6>
                             <span class="text-black">{{applicant.domain[3].value}}</span>
                         </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[4].value">
+                            <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram HR</h6>
+                            <span class="text-black">{{applicant.domain[4].value}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[5].value">
+                            <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram Marketing</h6>
+                            <span class="text-black">{{applicant.domain[5].value}}</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="row">
