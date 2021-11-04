@@ -29,27 +29,27 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[0].value">
                             <h6 class="mb-0"><img src="../../assets/images/github.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger" style="color: black;">Github</h6>
-                            <span class="text-black">{{applicant.domain[0].value}}</span>
+                            <span class="text-black"><a [href]="applicant.domain[0].value" class="links" target="_blank">{{applicant.domain[0].value}}</a></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[1].value">
                             <h6 class="mb-0"><img src="../../assets/images/behance.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Behance</h6>
-                            <span class="text-black">{{applicant.domain[1].value}}</span>
+                            <span class="text-black"><a [href]="applicant.domain[1].value" class="links" target="_blank">{{applicant.domain[1].value}}</a></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[2].value">
                             <h6 class="mb-0"><img src="../../assets/images/medium.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Medium</h6>
-                            <span class="text-black">{{applicant.domain[2].value}}</span>
+                            <span class="text-black"><a [href]="applicant.domain[2].value" class="links" target="_blank">{{applicant.domain[2].value}}</a></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[3].value">
                             <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram</h6>
-                            <span class="text-black">{{applicant.domain[3].value}}</span>
+                            <span class="text-black"><a [href]="applicant.domain[3].value" class="links" target="_blank">{{applicant.domain[3].value}}</a></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[4].value">
                             <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram HR</h6>
-                            <span class="text-black">{{applicant.domain[4].value}}</span>
+                            <span class="text-black"><a [href]="applicant.domain[4].value" class="links" target="_blank">{{applicant.domain[4].value}}</a></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="applicant.domain !== undefined && applicant.domain[5].value">
                             <h6 class="mb-0"><img src="../../assets/images/instagram.png" width="24" height="24" id="black" class="feather black feather-instagram mr-2 icon-inline text-danger">Instagram Marketing</h6>
-                            <span class="text-black">{{applicant.domain[5].value}}</span>
+                            <span class="text-black"><a [href]="applicant.domain[5].value" class="links" target="_blank">{{applicant.domain[5].value}}</a></span>
                         </li>
                     </ul>
                 </div>
