@@ -16,6 +16,8 @@ export class NewRegistrationComponent implements OnInit {
     "Github Link",
     "Behance Link",
     "Medium Link",
+    "Instagram Link",
+    "Instagram Link",
     "Instagram Link"
   ]
   constructor(private applicantService : ApplicantServiceService, private router : Router) {
@@ -28,6 +30,8 @@ export class NewRegistrationComponent implements OnInit {
       {id: 2, select : false, name : 'Graphics', value : "", isShortlisted : false},
       {id: 3, select : false, name : 'Content', value : "", isShortlisted : false},
       {id: 4, select : false, name : 'Creatives', value : "", isShortlisted : false},
+      {id: 5, select : false, name : 'HR', value : "", isShortlisted : false},
+      {id: 6, select : false, name : 'Marketing', value : "", isShortlisted : false},
     ];
   }
   postDetails(){

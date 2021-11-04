@@ -33,7 +33,7 @@
         <div class="domain-applied">
             <h2 class="heading">Domains Applied</h2>
             <div class="fieldName" *ngFor="let n of applicant.domain">
-                <div class="domains-container">
+                <div class="domains-container" *ngIf="n.value">
                     <h3 class=" d-flex justify-content-center" *ngIf="n.select === true">
                         {{ n.name }} :</h3>
 
